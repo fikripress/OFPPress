@@ -15,7 +15,7 @@
       html, body {
         width: 100%;
         overflow-x: hidden;
-        scroll-behavior: smooth;
+        scroll-behavior: smooth; /* Efek scroll halus saat menu diklik */
       }
 
       body {
@@ -112,6 +112,9 @@
         background: var(--primary-color);
         padding: 0 5%;
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
       }
 
       .mobile-menu-btn {
@@ -226,6 +229,15 @@
         margin: 0 auto;
       }
 
+      .content-block {
+        background: #ffffff;
+        padding: 40px;
+        margin-bottom: 40px;
+        border-radius: 8px;
+        border: 1px solid var(--border-color);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      }
+
       .section-title {
         font-size: 1.8rem;
         color: var(--secondary-color);
@@ -332,16 +344,14 @@
         </button>
         
         <ul class="nav-list" id="mainNav">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Home</a></li>
             
             <li class="has-dropdown">
                 <a href="javascript:void(0)">Tentang OFP Press &#9662;</a>
                 <ul class="dropdown">
-                    <!-- Link Mengarah ke File Halaman Baru -->
-                    <li><a href="about-publisher.html">Tentang Penerbit</a></li>
+                    <!-- Mengarahkan ke id="tentang-penerbit" -->
+                    <li><a href="#tentang-penerbit">Tentang Penerbit</a></li>
                     <li><a href="#visi-misi">Visi &amp; Misi</a></li>
-                    <li><a href="#fokus">Fokus Penerbitan</a></li>
-                    <li><a href="#editorial-board">Editorial Board</a></li>
                 </ul>
             </li>
 
@@ -349,19 +359,7 @@
                 <a href="javascript:void(0)">Katalog &#9662;</a>
                 <ul class="dropdown">
                     <li><a href="#academic">Buku Akademik</a></li>
-                    <li><a href="#edited-books">Edited Books &amp; Book Series</a></li>
-                    <li><a href="#professional">Buku Profesional &amp; Referensi</a></li>
-                    <li><a href="#practitioner">Publikasi Praktisi</a></li>
-                </ul>
-            </li>
-
-            <li class="has-dropdown">
-                <a href="javascript:void(0)">Publikasi &#9662;</a>
-                <ul class="dropdown">
-                    <li><a href="#call-for-paper">Panggilan Menulis</a></li>
-                    <li><a href="#guideline">Panduan Penulis</a></li>
-                    <li><a href="#etika">Etika Publikasi</a></li>
-                    <li><a href="#submit">Submit Proposal</a></li>
+                    <li><a href="#professional">Buku Profesional</a></li>
                 </ul>
             </li>
 
@@ -373,16 +371,28 @@
     <section class="hero">
         <h2>Penerbitan Karya Ilmiah &amp; Profesional Berstandar Tinggi</h2>
         <p>Mendorong Diseminasi Ilmu Pengetahuan dan Inovasi Melalui Publikasi Berkualitas.</p>
-        <a href="#submit" class="btn-primary">Kirimkan Proposal Buku</a>
+        <a href="#tentang-penerbit" class="btn-primary">Pelajari Selengkapnya</a>
     </section>
 
     <!-- Halaman Utama (Homepage Content) -->
     <main class="section-container">
-        <section id="visi-misi">
+
+        <!-- KONTEN SUBMENU TENTANG PENERBIT (Target Anchor Link) -->
+        <section id="tentang-penerbit" class="content-block">
+            <h3 class="section-title">Tentang Penerbit</h3>
+            <p>OFP Press merupakan lembaga penerbitan akademik dan profesional independen yang beroperasi sebagai <em>imprint</em> dari <strong>PT OFP Education</strong>. Kami berkomitmen untuk menerbitkan karya ilmiah, buku referensi, serta publikasi profesional berkualitas tinggi yang memberikan dampak nyata bagi pengembangan ilmu pengetahuan dan praktik di lapangan.</p>
+            <br>
+            <p>Dengan memegang prinsip keberlanjutan akademik dan integrasi ilmiah, OFP Press memfasilitasi para peneliti, praktisi, dan akademisi untuk mendiseminasikan gagasan inovatif mereka melalui skema penerbitan monograf, <em>edited book chapters</em>, serta buku teks terstandar.</p>
+        </section>
+
+        <!-- KONTEN VISI & MISI -->
+        <section id="visi-misi" class="content-block">
             <h3 class="section-title">Visi &amp; Misi</h3>
             <p><strong>Visi:</strong> Menjadi penerbit terdepan dalam menjembatani riset, akademisi, dan praktisi untuk kemajuan pengetahuan dunia.</p>
+            <br>
             <p><strong>Misi:</strong> Menyediakan ekosistem penerbitan yang kredibel, transparan, dan berstandar internasional.</p>
         </section>
+
     </main>
 
     <!-- Footer -->
@@ -397,6 +407,7 @@
         var mainNav = document.getElementById('mainNav');
         var arrow = document.getElementById('menuArrow');
 
+        // Toggle Menu Mobile
         if (menuBtn && mainNav) {
           menuBtn.addEventListener('click', function() {
             mainNav.classList.toggle('active-mobile');
@@ -406,7 +417,7 @@
           });
         }
 
-        // PERBAIKAN: Penahanan klik di HP hanya untuk Menu Utama (parent), tidak untuk submenu di dalamnya
+        // Buka Dropdown di Mobile
         var dropdownItems = document.querySelectorAll('.has-dropdown');
         dropdownItems.forEach(function(item) {
           var parentLink = item.querySelector(':scope > a');
@@ -418,6 +429,16 @@
               }
             });
           }
+        });
+
+        // Tutup menu mobile otomatis setelah memilih submenu di layar HP
+        var subLinks = document.querySelectorAll('.dropdown a');
+        subLinks.forEach(function(subLink) {
+          subLink.addEventListener('click', function() {
+            if (window.innerWidth <= 768) {
+              mainNav.classList.remove('active-mobile');
+            }
+          });
         });
       });
     </script>
