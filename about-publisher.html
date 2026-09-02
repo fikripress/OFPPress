@@ -1,148 +1,294 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang='id'>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tentang OFH Press — Publisher Profile</title>
+    <meta charset='UTF-8'/>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' name='viewport'/>
+    <title>OFP Press — Connecting Research, Practice, Policy, and Innovation</title>
+    
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.7;
-            color: #2d3748;
-            background-color: #f7fafc;
-        }
-        /* Header & Navigasi */
-        header {
-            background-color: #1a365d;
-            color: #ffffff;
-            padding: 1rem 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #ffffff;
-            text-decoration: none;
-        }
-        nav {
-            margin-top: 10px;
-        }
-        nav a {
-            color: #e2e8f0;
-            text-decoration: none;
-            margin-left: 20px;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-        nav a:hover, nav a.active {
-            color: #63b3ed;
-        }
-        /* Konten Halaman */
-        main {
-            padding: 40px 0;
-        }
-        .content-card {
-            background: #ffffff;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-        h1 {
-            color: #1a365d;
-            font-size: 2rem;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #e2e8f0;
-        }
-        p {
-            margin-bottom: 1.5rem;
-            text-align: justify;
-        }
-        .slogan-box {
-            margin-top: 30px;
-            padding: 20px;
-            background-color: #ebf8ff;
-            border-left: 4px solid #3182ce;
-            border-radius: 0 4px 4px 0;
-        }
-        .slogan-box p {
-            margin-bottom: 0;
-            color: #2b6cb0;
-            font-size: 1.1rem;
-        }
-        /* Footer */
-        footer {
-            background-color: #2d3748;
-            color: #a0aec0;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 40px;
-            font-size: 0.9rem;
-        }
+      /* Reset & Base Styles */
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html, body { width: 100%; overflow-x: hidden; }
+      body { font-family: 'Segoe UI', Arial, sans-serif; color: #222; line-height: 1.6; background-color: #fcfcfc; top: 0 !important; }
+      a { text-decoration: none; color: inherit; }
+      ul { list-style: none; }
+
+      /* Academic Palette */
+      :root {
+        --primary-color: #003366; /* Oxford Blue */
+        --accent-color: #c5a059; /* Gold Accent */
+        --bg-light: #f8fafc;
+        --border-color: #e2e8f0;
+      }
+
+      /* Sembunyikan Frame Toolbar bawaan Google Translate */
+      .goog-te-banner-frame, .skiptranslate, #goog-gt-tt, .goog-te-balloon-frame { display: none !important; }
+      body { top: 0px !important; position: static !important; }
+      .goog-text-highlight { background-color: transparent !important; box-shadow: none !important; }
+
+      /* Top Bar */
+      .top-bar { background-color: #0f172a; color: #fff; padding: 10px 5%; display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; position: relative; z-index: 10001; }
+      .lang-switcher button { background: none; border: 1px solid #ffffff4d; color: #fff; padding: 6px 12px; cursor: pointer; border-radius: 4px; font-size: 0.8rem; margin-left: 5px; transition: 0.3s; }
+      .lang-switcher button.active { background-color: var(--accent-color); border-color: var(--accent-color); color: #000; font-weight: bold; }
+
+      /* Header Branding */
+      header { background: #fff; border-bottom: 2px solid var(--primary-color); padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; }
+      .brand h1 { font-size: 2rem; color: var(--primary-color); font-weight: 800; letter-spacing: 1px; }
+      .brand p { font-size: 0.85rem; color: #555; font-style: italic; }
+
+      /* Navigation Menu */
+      nav { background: var(--primary-color); padding: 0 5%; position: relative; z-index: 9999; }
+      .mobile-menu-btn { display: none; background: #002244; border: none; color: #fff; padding: 12px 15px; width: 100%; text-align: left; font-size: 1rem; font-weight: 600; cursor: pointer; justify-content: space-between; align-items: center; }
+      
+      nav ul.nav-list { display: flex; flex-wrap: wrap; list-style: none; margin: 0; padding: 0; }
+      nav ul.nav-list > li { position: relative; }
+      nav ul.nav-list > li > a { display: block; padding: 14px 20px; color: #fff; font-size: 0.95rem; font-weight: 500; transition: background 0.3s; }
+      nav ul.nav-list > li > a:hover { background: rgba(255, 255, 255, 0.15); }
+      
+      /* Submenu (Dropdown) Desktop */
+      nav ul.nav-list > li:hover .dropdown { display: block; }
+      .dropdown { display: none; position: absolute; top: 100%; left: 0; background: #002244; min-width: 260px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); z-index: 10000; border-top: 2px solid var(--accent-color); }
+      .dropdown li { width: 100%; }
+      .dropdown li a { padding: 12px 18px; font-size: 0.88rem; border-bottom: 1px solid rgba(255,255,255,0.05); color: #e2e8f0; display: block; }
+      .dropdown li a:hover { background: rgba(255,255,255,0.1); color: #fff; }
+
+      /* Hero Section */
+      .hero-container { min-height: 45vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(rgba(0, 51, 102, 0.92), rgba(0, 51, 102, 0.96)), url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1500&q=80') center/cover; color: #fff; text-align: center; padding: 50px 20px; }
+      .hero-content { max-width: 900px; }
+      .hero-content h2 { font-size: 2.5rem; font-weight: 700; margin-bottom: 15px; color: #ffffff; line-height: 1.2; }
+      .hero-content p { font-size: 1.15rem; color: #e2e8f0; margin-bottom: 25px; line-height: 1.5; font-weight: 300; }
+      .hero-diagram { display: inline-flex; gap: 15px; align-items: center; background: rgba(255, 255, 255, 0.08); padding: 10px 20px; border-radius: 50px; font-size: 0.9rem; border: 1px solid rgba(255,255,255,0.2); }
+
+      /* Highlight News Section */
+      .news-section { background-color: var(--bg-light); padding: 50px 5%; border-bottom: 1px solid var(--border-color); }
+      .news-container { max-width: 1000px; margin: 0 auto; }
+      .news-header { margin-bottom: 30px; text-align: center; }
+      .news-header h3 { font-size: 1.6rem; color: var(--primary-color); position: relative; display: inline-block; padding-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+      .news-header h3::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 40px; height: 3px; background-color: var(--accent-color); }
+      
+      .news-list { display: flex; flex-direction: column; gap: 25px; }
+      .news-highlight-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: transform 0.3s, box-shadow 0.3s; border: 1px solid var(--border-color); display: flex; text-decoration: none; color: inherit; }
+      .news-highlight-card:hover { transform: translateY(-4px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+      .news-image-wrapper { width: 40%; position: relative; overflow: hidden; min-height: 240px; }
+      .news-image { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+      .news-body { width: 60%; padding: 25px; display: flex; flex-direction: column; justify-content: center; }
+      
+      .news-badge { display: inline-block; background-color: var(--accent-color); color: #000; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; padding: 4px 10px; border-radius: 20px; width: fit-content; margin-bottom: 10px; }
+      .news-date { font-size: 0.8rem; color: #64748b; font-weight: 500; margin-bottom: 8px; }
+      .news-title { font-size: 1.25rem; color: var(--primary-color); font-weight: 700; margin-bottom: 10px; line-height: 1.35; }
+      .news-excerpt { font-size: 0.9rem; color: #475569; line-height: 1.5; margin-bottom: 15px; }
+      .news-link { font-size: 0.85rem; font-weight: 700; color: var(--primary-color); display: inline-flex; align-items: center; gap: 6px; }
+
+      /* Footer */
+      footer { background: #0f172a; color: #94a3b8; padding: 25px 5%; font-size: 0.85rem; border-top: 4px solid var(--accent-color); text-align: center; }
+
+      /* RESPONSIVE MEDIA QUERIES */
+      @media screen and (max-width: 992px) {
+        .news-highlight-card { flex-direction: column; }
+        .news-image-wrapper { width: 100%; height: 200px; min-height: auto; }
+        .news-body { width: 100%; padding: 20px; }
+        .hero-content h2 { font-size: 2rem; }
+      }
+
+      @media screen and (max-width: 768px) {
+        .top-bar { flex-direction: column; gap: 8px; text-align: center; padding: 10px; }
+        header { flex-direction: column; text-align: center; gap: 8px; padding: 15px; }
+        .brand h1 { font-size: 1.6rem; }
+        
+        .mobile-menu-btn { display: flex !important; }
+        nav { padding: 0; }
+        nav ul.nav-list { display: none; flex-direction: column; width: 100%; background: #001a33; }
+        nav ul.nav-list.active-mobile { display: flex !important; }
+        nav ul.nav-list > li { width: 100%; border-bottom: 1px solid rgba(255,255,255,0.08); }
+        nav ul.nav-list > li > a { padding: 14px 20px; font-size: 0.95rem; }
+        
+        nav ul.nav-list > li:hover .dropdown { display: none; }
+        nav ul.nav-list > li.open-dropdown .dropdown { display: block !important; position: static; box-shadow: none; border-top: none; background: #000d1a; }
+        .dropdown li a { padding-left: 35px; }
+
+        .hero-container { padding: 35px 15px; }
+        .hero-content h2 { font-size: 1.5rem; }
+        .hero-content p { font-size: 0.9rem; }
+        .hero-diagram { flex-direction: column; gap: 4px; border-radius: 12px; width: 100%; padding: 12px; }
+      }
     </style>
 </head>
 <body>
 
-    <!-- Header & Navigasi Menu -->
+    <div class='top-bar'>
+        <div>An Imprint of PT OFP Education</div>
+        
+        <div class='lang-switcher'>
+            <div id='google_translate_element' style='display:none;'></div>
+            <button class='active' id='btn-id' onclick='translateTo("id")'>Bahasa Indonesia</button>
+            <button id='btn-en' onclick='translateTo("en")'>English</button>
+        </div>
+    </div>
+
     <header>
-        <div class="container header-content">
-            <a href="index.html" class="logo">OFH Press</a>
-            <nav>
-                <a href="index.html">Beranda</a>
-                <a href="about-publisher.html" class="active">Tentang Publisher</a>
-            </nav>
+        <div class='brand'>
+            <h1>OFP PRESS</h1>
+            <p>Academic &amp; Professional Publishing</p>
         </div>
     </header>
 
-    <!-- Isi Konten Utama Tentang OFH Press -->
-    <main>
-        <div class="container">
-            <article class="content-card">
-                <h1>Tentang OFH Press</h1>
+    <nav>
+        <button class='mobile-menu-btn' id='menuToggleBtn'>
+            <span>&#9776; MENU</span>
+            <span id='menuArrow'>&#9660;</span>
+        </button>
+        
+        <ul class='nav-list' id='mainNav'>
+            <li><a href='index.html'>Home</a></li>
+            
+            <li class='has-dropdown'>
+                <a href='javascript:void(0)'>Tentang OFP Press &#9662;</a>
+                <ul class='dropdown'>
+                    <li><a href='#about'>Tentang Penerbit</a></li>
+                    <li><a href='#visi-misi'>Visi &amp; Misi</a></li>
+                    <li><a href='#fokus'>Fokus Penerbitan</a></li>
+                    <li><a href='#editorial-board'>Editorial Board</a></li>
+                </ul>
+            </li>
 
-                <p><strong>OFH Press</strong> adalah penerbit akademik dan profesional yang berfokus pada penerbitan dan diseminasi karya berbasis penelitian, praktik, kebijakan, dan inovasi. Kami menyediakan ruang bagi peneliti, akademisi, pendidik, praktisi, mahasiswa, organisasi, dan pembuat kebijakan untuk mendokumentasikan serta membagikan pengetahuan, gagasan, pengalaman, dan hasil penelitian melalui publikasi yang berkualitas dan relevan.</p>
+            <li class='has-dropdown'>
+                <a href='javascript:void(0)'>Katalog &#9662;</a>
+                <ul class='dropdown'>
+                    <li><a href='#academic'>Buku Akademik</a></li>
+                    <li><a href='#edited-books'>Edited Books &amp; Book Series</a></li>
+                    <li><a href='#professional'>Buku Profesional &amp; Referensi</a></li>
+                    <li><a href='#practitioner'>Publikasi Praktisi</a></li>
+                </ul>
+            </li>
 
-                <p>Kami percaya bahwa pengetahuan tidak hanya lahir dari ruang akademik, tetapi juga dari pengalaman di lapangan, praktik profesional, pengembangan kebijakan, inovasi, serta berbagai upaya masyarakat dalam menjawab tantangan pendidikan dan sosial. Karena itu, OFH Press memandang penerbitan bukan sekadar proses menghasilkan buku, tetapi sebagai bagian dari upaya membangun, menghubungkan, dan menyebarluaskan pengetahuan agar dapat memberikan manfaat yang lebih luas.</p>
+            <li class='has-dropdown'>
+                <a href='javascript:void(0)'>Publikasi &#9662;</a>
+                <ul class='dropdown'>
+                    <li><a href='#call-for-paper'>Panggilan Menulis</a></li>
+                    <li><a href='#guideline'>Panduan Penulis</a></li>
+                    <li><a href='#etika'>Etika Publikasi</a></li>
+                    <li><a href='#submit'>Submit Proposal</a></li>
+                </ul>
+            </li>
 
-                <p>OFH Press berupaya mempertemukan <strong>riset, praktik, kebijakan, dan inovasi</strong> dalam berbagai publikasi yang memiliki nilai akademik sekaligus relevansi dengan dunia nyata. Kami menerbitkan buku akademik dan berbasis penelitian, <em>edited books</em>, <em>book series</em>, buku profesional dan referensi, serta publikasi berbasis praktik. Kami juga terbuka terhadap karya lintas disiplin yang memiliki kontribusi terhadap pengembangan pendidikan, pengetahuan, kebijakan, praktik, maupun inovasi.</p>
+            <li><a href='#contact'>Kontak</a></li>
+        </ul>
+    </nav>
 
-                <p>Fokus penerbitan kami terutama mencakup pendidikan dan pembelajaran, kurikulum dan pedagogi, literasi dan numerasi, pendidikan anak usia dini dan pendidikan dasar, pendidikan rural dan komunitas yang kurang terlayani, kepemimpinan pendidikan dan pengembangan profesional guru, kebijakan dan reformasi pendidikan, teknologi pendidikan dan kecerdasan artifisial, inklusi dan keadilan pendidikan, penelitian dan evaluasi program, serta berbagai isu baru yang berkaitan dengan perkembangan pendidikan dan masyarakat.</p>
-
-                <p>Dalam menjalankan proses penerbitan, OFH Press berkomitmen terhadap <strong>kualitas editorial, integritas akademik, orisinalitas, transparansi, dan profesionalisme</strong>. Setiap naskah dievaluasi sesuai dengan karakteristik dan tujuan publikasinya, dengan proses yang dapat mencakup penilaian editorial, telaah substansi, <em>peer review</em>, revisi, penyuntingan, dan pemeriksaan akhir. Kami mendorong para penulis dan kontributor untuk menjunjung tinggi orisinalitas, penggunaan sumber yang bertanggung jawab, atribusi yang tepat, serta prinsip-prinsip etika dalam penerbitan.</p>
-
-                <p>Berakar di Indonesia, OFH Press memiliki perhatian khusus terhadap penelitian, pengalaman, praktik, dan gagasan yang berkembang dalam konteks Indonesia. Kami percaya bahwa pengetahuan yang berasal dari konteks lokal memiliki kontribusi penting bagi percakapan pendidikan di tingkat nasional, regional, maupun internasional. Oleh karena itu, kami terbuka terhadap karya dalam <strong>Bahasa Indonesia maupun Bahasa Inggris</strong>, serta kolaborasi dengan penulis dan institusi dari Indonesia maupun berbagai negara.</p>
-
-                <p>OFH Press merupakan <strong>salah satu bagian yang dikembangkan di bawah PT OFH Education</strong>, sebuah perusahaan yang bergerak dalam bidang pendidikan dan pengembangan pengetahuan. Dalam ekosistem tersebut, OFH Press memiliki fokus khusus pada penerbitan dan diseminasi pengetahuan, dengan tujuan mendukung lahirnya publikasi yang dapat mempertemukan penelitian, praktik, kebijakan, dan inovasi.</p>
-
-                <div class="slogan-box">
-                    <p><strong>OFH Press — Connecting Research, Practice, Policy, and Innovation.</strong></p>
-                </div>
-            </article>
+    <div class='hero-container'>
+        <div class='hero-content'>
+            <h2>Connecting Research, Practice, Policy, and Innovation</h2>
+            <p>Mempertemukan hasil riset, pengalaman praktik, pengembangan kebijakan, dan solusi inovatif untuk ekosistem pengetahuan yang berdampak.</p>
+            
+            <div class='hero-diagram'>
+                <span>Research</span> &rarr; <span>Practice</span> &rarr; <span>Policy</span> &rarr; <span>Innovation</span>
+            </div>
         </div>
-    </main>
+    </div>
 
-    <!-- Footer -->
+    <div class='news-section'>
+        <div class='news-container'>
+            <div class='news-header'>
+                <h3>Sorotan Berita &amp; Publikasi</h3>
+            </div>
+            
+            <div class='news-list'>
+                <a class='news-highlight-card' href='#'>
+                    <div class='news-image-wrapper'>
+                        <img alt='Penerbitan Buku Academic &amp; Book Chapter' class='news-image' src='https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1000&q=80'/>
+                    </div>
+                    <div class='news-body'>
+                        <span class='news-badge'>Kemitraan Strategis</span>
+                        <div class='news-date'>28 Agustus 2026</div>
+                        <h4 class='news-title'>OFP Press dan Nusantara Education Research Network Berkolaborasi dalam Penerbitan Edited Book Chapter</h4>
+                        <div class='news-excerpt'>
+                            <p>OFP Press secara resmi menjalin kolaborasi strategis bersama Nusantara Education Research Network untuk mendorong diseminasi hasil riset berkualitas tinggi melalui skema penerbitan Edited Book Chapter bertaraf internasional.</p>
+                        </div>
+                        <span class='news-link'>Baca Berita Selengkapnya &rarr;</span>
+                    </div>
+                </a>
+
+                <a class='news-highlight-card' href='#'>
+                    <div class='news-image-wrapper'>
+                        <img alt='Call for Chapter Proposals 2026' class='news-image' src='https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=1000&q=80'/>
+                    </div>
+                    <div class='news-body'>
+                        <span class='news-badge'>Call for Chapters</span>
+                        <div class='news-date'>Penerbitan 2026</div>
+                        <h4 class='news-title'>📚 CALL FOR CHAPTER PROPOSALS 2026: Connecting Research, Practice, Policy, and Innovation in Education</h4>
+                        <div class='news-excerpt'>
+                            <p>Undangan terbuka bagi peneliti, akademisi, dan praktisi pendidikan untuk berkontribusi dalam penerbitan Edited Book Chapter 2026. Mari jembatani riset, praktik, kebijakan, dan inovasi pendidikan bersama OFP Press.</p>
+                        </div>
+                        <span class='news-link'>Lihat Panduan &amp; Submit Proposal &rarr;</span>
+                    </div>
+                </a>
+
+                <a class='news-highlight-card' href='#'>
+                    <div class='news-image-wrapper'>
+                        <img alt='Open Call for Editors OFP Press' class='news-image' src='https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1000&q=80'/>
+                    </div>
+                    <div class='news-body'>
+                        <span class='news-badge'>Recruitment</span>
+                        <div class='news-date'>Kesempatan Editor</div>
+                        <h4 class='news-title'>📚 OPEN CALL FOR EDITORS: OFP Press Education Book Series</h4>
+                        <div class='news-excerpt'>
+                            <p>Peluang kepemimpinan akademik bagi para pakar dan akademisi untuk bergabung sebagai Editor Seri Buku Pendidikan OFP Press. Ambil peran kunci dalam mengawal kualitas karya ilmiah berkualitas tinggi.</p>
+                        </div>
+                        <span class='news-link'>Lihat Syarat &amp; Pendaftaran Editor &rarr;</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
     <footer>
-        <div class="container">
-            <p>&copy; 2026 OFH Press — PT OFH Education. All rights reserved.</p>
-        </div>
+        <p>&copy; 2026 OFP Press &mdash; PT OFP Education. All rights reserved.</p>
     </footer>
 
+    <!-- Script Google Translate & Navigation Toggle -->
+    <script type='text/javascript'>
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'id', includedLanguages: 'en,id', autoDisplay: false}, 'google_translate_element');
+      }
+
+      function translateTo(langCode) {
+        var select = document.querySelector('.goog-te-combo');
+        if (select) {
+          select.value = langCode;
+          select.dispatchEvent(new Event('change'));
+          document.querySelectorAll('.lang-switcher button').forEach(function(btn) { btn.classList.remove('active'); });
+          document.getElementById('btn-' + langCode).classList.add('active');
+        }
+      }
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var menuBtn = document.getElementById('menuToggleBtn');
+        var mainNav = document.getElementById('mainNav');
+        var arrow = document.getElementById('menuArrow');
+
+        if (menuBtn && mainNav) {
+          menuBtn.addEventListener('click', function() {
+            mainNav.classList.toggle('active-mobile');
+            if (arrow) {
+              arrow.innerHTML = mainNav.classList.contains('active-mobile') ? '&#9650;' : '&#9660;';
+            }
+          });
+        }
+
+        var dropdownItems = document.querySelectorAll('.has-dropdown');
+        dropdownItems.forEach(function(item) {
+          var link = item.querySelector('a');
+          if (link) {
+            link.addEventListener('click', function(e) {
+              if (window.innerWidth <= 768) {
+                e.preventDefault();
+                item.classList.toggle('open-dropdown');
+              }
+            });
+          }
+        });
+      });
+    </script>
+    <script src='//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit' type='text/javascript'></script>
 </body>
 </html>
