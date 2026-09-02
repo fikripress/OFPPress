@@ -3,69 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Publisher - OFH Press</title>
+    <title>Tentang OFH Press — Publisher Profile</title>
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
         body {
             font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 40px auto;
+            line-height: 1.7;
+            color: #2d3748;
+            background-color: #f7fafc;
+        }
+        /* Header & Navigasi */
+        header {
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
             padding: 0 20px;
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ffffff;
+            text-decoration: none;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            color: #e2e8f0;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        nav a:hover, nav a.active {
+            color: #63b3ed;
+        }
+        /* Konten Halaman */
+        main {
+            padding: 40px 0;
+        }
+        .content-card {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
         h1 {
             color: #1a365d;
-            border-bottom: 2px solid #e2e8f0;
+            font-size: 2rem;
+            margin-bottom: 20px;
             padding-bottom: 10px;
+            border-bottom: 2px solid #e2e8f0;
         }
         p {
-            margin-bottom: 1.5em;
+            margin-bottom: 1.5rem;
             text-align: justify;
         }
-        .slogan {
+        .slogan-box {
             margin-top: 30px;
-            padding: 15px;
-            background-color: #f7fafc;
-            border-left: 4px solid #2b6cb0;
+            padding: 20px;
+            background-color: #ebf8ff;
+            border-left: 4px solid #3182ce;
+            border-radius: 0 4px 4px 0;
         }
-        nav {
-            margin-bottom: 20px;
-        }
-        nav a {
+        .slogan-box p {
+            margin-bottom: 0;
             color: #2b6cb0;
-            text-decoration: none;
-            font-weight: bold;
+            font-size: 1.1rem;
         }
-        nav a:hover {
-            text-decoration: underline;
+        /* Footer */
+        footer {
+            background-color: #2d3748;
+            color: #a0aec0;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
 
-    <nav>
-        <a href="/">&larr; Kembali ke Beranda</a>
-    </nav>
+    <!-- Header & Navigasi Menu -->
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">OFH Press</a>
+            <nav>
+                <a href="index.html">Beranda</a>
+                <a href="about-publisher.html" class="active">Tentang Publisher</a>
+            </nav>
+        </div>
+    </header>
 
-    <h1>Tentang OFH Press</h1>
+    <!-- Isi Konten Utama Tentang OFH Press -->
+    <main>
+        <div class="container">
+            <article class="content-card">
+                <h1>Tentang OFH Press</h1>
 
-    <p><strong>OFH Press</strong> adalah penerbit akademik dan profesional yang berfokus pada penerbitan dan diseminasi karya berbasis penelitian, praktik, kebijakan, dan inovasi. Kami menyediakan ruang bagi peneliti, akademisi, pendidik, praktisi, mahasiswa, organisasi, dan pembuat kebijakan untuk mendokumentasikan serta membagikan pengetahuan, gagasan, pengalaman, dan hasil penelitian melalui publikasi yang berkualitas dan relevan.</p>
+                <p><strong>OFH Press</strong> adalah penerbit akademik dan profesional yang berfokus pada penerbitan dan diseminasi karya berbasis penelitian, praktik, kebijakan, dan inovasi. Kami menyediakan ruang bagi peneliti, akademisi, pendidik, praktisi, mahasiswa, organisasi, dan pembuat kebijakan untuk mendokumentasikan serta membagikan pengetahuan, gagasan, pengalaman, dan hasil penelitian melalui publikasi yang berkualitas dan relevan.</p>
 
-    <p>Kami percaya bahwa pengetahuan tidak hanya lahir dari ruang akademik, tetapi juga dari pengalaman di lapangan, praktik profesional, pengembangan kebijakan, inovasi, serta berbagai upaya masyarakat dalam menjawab tantangan pendidikan dan sosial. Karena itu, OFH Press memandang penerbitan bukan sekadar proses menghasilkan buku, tetapi sebagai bagian dari upaya membangun, menghubungkan, dan menyebarluaskan pengetahuan agar dapat memberikan manfaat yang lebih luas.</p>
+                <p>Kami percaya bahwa pengetahuan tidak hanya lahir dari ruang akademik, tetapi juga dari pengalaman di lapangan, praktik profesional, pengembangan kebijakan, inovasi, serta berbagai upaya masyarakat dalam menjawab tantangan pendidikan dan sosial. Karena itu, OFH Press memandang penerbitan bukan sekadar proses menghasilkan buku, tetapi sebagai bagian dari upaya membangun, menghubungkan, dan menyebarluaskan pengetahuan agar dapat memberikan manfaat yang lebih luas.</p>
 
-    <p>OFH Press berupaya mempertemukan <strong>riset, praktik, kebijakan, dan inovasi</strong> dalam berbagai publikasi yang memiliki nilai akademik sekaligus relevansi dengan dunia nyata. Kami menerbitkan buku akademik dan berbasis penelitian, <em>edited books</em>, <em>book series</em>, buku profesional dan referensi, serta publikasi berbasis praktik. Kami juga terbuka terhadap karya lintas disiplin yang memiliki kontribusi terhadap pengembangan pendidikan, pengetahuan, kebijakan, praktik, maupun inovasi.</p>
+                <p>OFH Press berupaya mempertemukan <strong>riset, praktik, kebijakan, dan inovasi</strong> dalam berbagai publikasi yang memiliki nilai akademik sekaligus relevansi dengan dunia nyata. Kami menerbitkan buku akademik dan berbasis penelitian, <em>edited books</em>, <em>book series</em>, buku profesional dan referensi, serta publikasi berbasis praktik. Kami juga terbuka terhadap karya lintas disiplin yang memiliki kontribusi terhadap pengembangan pendidikan, pengetahuan, kebijakan, praktik, maupun inovasi.</p>
 
-    <p>Fokus penerbitan kami terutama mencakup pendidikan dan pembelajaran, kurikulum dan pedagogi, literasi dan numerasi, pendidikan anak usia dini dan pendidikan dasar, pendidikan rural dan komunitas yang kurang terlayani, kepemimpinan pendidikan dan pengembangan profesional guru, kebijakan dan reformasi pendidikan, teknologi pendidikan dan kecerdasan artifisial, inklusi dan keadilan pendidikan, penelitian dan evaluasi program, serta berbagai isu baru yang berkaitan dengan perkembangan pendidikan dan masyarakat.</p>
+                <p>Fokus penerbitan kami terutama mencakup pendidikan dan pembelajaran, kurikulum dan pedagogi, literasi dan numerasi, pendidikan anak usia dini dan pendidikan dasar, pendidikan rural dan komunitas yang kurang terlayani, kepemimpinan pendidikan dan pengembangan profesional guru, kebijakan dan reformasi pendidikan, teknologi pendidikan dan kecerdasan artifisial, inklusi dan keadilan pendidikan, penelitian dan evaluasi program, serta berbagai isu baru yang berkaitan dengan perkembangan pendidikan dan masyarakat.</p>
 
-    <p>Dalam menjalankan proses penerbitan, OFH Press berkomitmen terhadap <strong>kualitas editorial, integritas akademik, orisinalitas, transparansi, dan profesionalisme</strong>. Setiap naskah dievaluasi sesuai dengan karakteristik dan tujuan publikasinya, dengan proses yang dapat mencakup penilaian editorial, telaah substansi, <em>peer review</em>, revisi, penyuntingan, dan pemeriksaan akhir. Kami mendorong para penulis dan kontributor untuk menjunjung tinggi orisinalitas, penggunaan sumber yang bertanggung jawab, atribusi yang tepat, serta prinsip-prinsip etika dalam penerbitan.</p>
+                <p>Dalam menjalankan proses penerbitan, OFH Press berkomitmen terhadap <strong>kualitas editorial, integritas akademik, orisinalitas, transparansi, dan profesionalisme</strong>. Setiap naskah dievaluasi sesuai dengan karakteristik dan tujuan publikasinya, dengan proses yang dapat mencakup penilaian editorial, telaah substansi, <em>peer review</em>, revisi, penyuntingan, dan pemeriksaan akhir. Kami mendorong para penulis dan kontributor untuk menjunjung tinggi orisinalitas, penggunaan sumber yang bertanggung jawab, atribusi yang tepat, serta prinsip-prinsip etika dalam penerbitan.</p>
 
-    <p>Berakar di Indonesia, OFH Press memiliki perhatian khusus terhadap penelitian, pengalaman, praktik, dan gagasan yang berkembang dalam konteks Indonesia. Kami percaya bahwa pengetahuan yang berasal dari konteks lokal memiliki kontribusi penting bagi percakapan pendidikan di tingkat nasional, regional, maupun internasional. Oleh karena itu, kami terbuka terhadap karya dalam <strong>Bahasa Indonesia maupun Bahasa Inggris</strong>, serta kolaborasi dengan penulis dan institusi dari Indonesia maupun berbagai negara.</p>
+                <p>Berakar di Indonesia, OFH Press memiliki perhatian khusus terhadap penelitian, pengalaman, praktik, dan gagasan yang berkembang dalam konteks Indonesia. Kami percaya bahwa pengetahuan yang berasal dari konteks lokal memiliki kontribusi penting bagi percakapan pendidikan di tingkat nasional, regional, maupun internasional. Oleh karena itu, kami terbuka terhadap karya dalam <strong>Bahasa Indonesia maupun Bahasa Inggris</strong>, serta kolaborasi dengan penulis dan institusi dari Indonesia maupun berbagai negara.</p>
 
-    <p>OFH Press merupakan <strong>salah satu bagian yang dikembangkan di bawah PT OFH Education</strong>, sebuah perusahaan yang bergerak dalam bidang pendidikan dan pengembangan pengetahuan. Dalam ekosistem tersebut, OFH Press memiliki fokus khusus pada penerbitan dan diseminasi pengetahuan, dengan tujuan mendukung lahirnya publikasi yang dapat mempertemukan penelitian, praktik, kebijakan, dan inovasi.</p>
+                <p>OFH Press merupakan <strong>salah satu bagian yang dikembangkan di bawah PT OFH Education</strong>, sebuah perusahaan yang bergerak dalam bidang pendidikan dan pengembangan pengetahuan. Dalam ekosistem tersebut, OFH Press memiliki fokus khusus pada penerbitan dan diseminasi pengetahuan, dengan tujuan mendukung lahirnya publikasi yang dapat mempertemukan penelitian, praktik, kebijakan, dan inovasi.</p>
 
-    <div class="slogan">
-        <p><strong>OFH Press — Connecting Research, Practice, Policy, and Innovation.</strong></p>
-    </div>
+                <div class="slogan-box">
+                    <p><strong>OFH Press — Connecting Research, Practice, Policy, and Innovation.</strong></p>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 OFH Press — PT OFH Education. All rights reserved.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
