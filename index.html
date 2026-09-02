@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tentang Penerbit — OFP Press</title>
+    <title>OFP Press — Academic & Professional Publishing</title>
     <style>
       /* Reset & Base Styles */
       *, *::before, *::after {
@@ -15,6 +15,7 @@
       html, body {
         width: 100%;
         overflow-x: hidden;
+        scroll-behavior: smooth;
       }
 
       body {
@@ -183,60 +184,54 @@
         padding-left: 22px;
       }
 
-      /* Header Halaman (Breadcrumb / Banner Small) */
-      .page-banner {
-        background: var(--primary-color);
+      /* Hero Section */
+      .hero {
+        background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
         color: #ffffff;
-        padding: 40px 5%;
-        border-bottom: 1px solid var(--border-color);
+        padding: 80px 5%;
+        text-align: center;
       }
 
-      .page-banner h2 {
-        font-size: 2rem;
-        color: #ffffff;
-        margin-bottom: 8px;
-      }
-
-      .breadcrumb {
-        font-size: 0.85rem;
-        color: var(--accent-color);
-      }
-
-      .breadcrumb a {
-        color: #cbd5e1;
-      }
-
-      .breadcrumb a:hover {
+      .hero h2 {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
         color: #ffffff;
       }
 
-      /* Container Content */
-      .content-container {
-        padding: 50px 5%;
-        max-width: 1000px;
+      .hero p {
+        font-size: 1.1rem;
+        max-width: 700px;
+        margin: 0 auto 25px auto;
+        color: #e2e8f0;
+      }
+
+      .btn-primary {
+        display: inline-block;
+        background: var(--accent-color);
+        color: #0f172a;
+        padding: 12px 28px;
+        font-weight: 700;
+        border-radius: 4px;
+        transition: background 0.2s ease;
+      }
+
+      .btn-primary:hover {
+        background: var(--accent-hover);
+      }
+
+      /* Main Content Section */
+      .section-container {
+        padding: 60px 5%;
+        max-width: 1100px;
         margin: 0 auto;
-        background: #ffffff;
-        margin-top: 30px;
-        margin-bottom: 50px;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-        border: 1px solid var(--border-color);
       }
 
-      .content-container h3 {
+      .section-title {
+        font-size: 1.8rem;
         color: var(--secondary-color);
-        font-size: 1.4rem;
-        margin-top: 25px;
-        margin-bottom: 12px;
-        border-left: 4px solid var(--accent-color);
-        padding-left: 10px;
-      }
-
-      .content-container p {
-        margin-bottom: 16px;
-        color: #334155;
-        font-size: 1rem;
-        text-align: justify;
+        margin-bottom: 20px;
+        border-bottom: 2px solid var(--border-color);
+        padding-bottom: 10px;
       }
 
       /* Footer */
@@ -342,57 +337,52 @@
             <li class="has-dropdown">
                 <a href="javascript:void(0)">Tentang OFP Press &#9662;</a>
                 <ul class="dropdown">
+                    <!-- Link Mengarah ke File Halaman Baru -->
                     <li><a href="about-publisher.html">Tentang Penerbit</a></li>
-                    <li><a href="index.html#visi-misi">Visi &amp; Misi</a></li>
-                    <li><a href="index.html#fokus">Fokus Penerbitan</a></li>
-                    <li><a href="index.html#editorial-board">Editorial Board</a></li>
+                    <li><a href="#visi-misi">Visi &amp; Misi</a></li>
+                    <li><a href="#fokus">Fokus Penerbitan</a></li>
+                    <li><a href="#editorial-board">Editorial Board</a></li>
                 </ul>
             </li>
 
             <li class="has-dropdown">
                 <a href="javascript:void(0)">Katalog &#9662;</a>
                 <ul class="dropdown">
-                    <li><a href="index.html#academic">Buku Akademik</a></li>
-                    <li><a href="index.html#edited-books">Edited Books &amp; Book Series</a></li>
-                    <li><a href="index.html#professional">Buku Profesional &amp; Referensi</a></li>
-                    <li><a href="index.html#practitioner">Publikasi Praktisi</a></li>
+                    <li><a href="#academic">Buku Akademik</a></li>
+                    <li><a href="#edited-books">Edited Books &amp; Book Series</a></li>
+                    <li><a href="#professional">Buku Profesional &amp; Referensi</a></li>
+                    <li><a href="#practitioner">Publikasi Praktisi</a></li>
                 </ul>
             </li>
 
             <li class="has-dropdown">
                 <a href="javascript:void(0)">Publikasi &#9662;</a>
                 <ul class="dropdown">
-                    <li><a href="index.html#call-for-paper">Panggilan Menulis</a></li>
-                    <li><a href="index.html#guideline">Panduan Penulis</a></li>
-                    <li><a href="index.html#etika">Etika Publikasi</a></li>
-                    <li><a href="index.html#submit">Submit Proposal</a></li>
+                    <li><a href="#call-for-paper">Panggilan Menulis</a></li>
+                    <li><a href="#guideline">Panduan Penulis</a></li>
+                    <li><a href="#etika">Etika Publikasi</a></li>
+                    <li><a href="#submit">Submit Proposal</a></li>
                 </ul>
             </li>
 
-            <li><a href="index.html#contact">Kontak</a></li>
+            <li><a href="#contact">Kontak</a></li>
         </ul>
     </nav>
 
-    <!-- Banner Judul Halaman -->
-    <div class="page-banner">
-        <h2>Tentang Penerbit</h2>
-        <div class="breadcrumb">
-            <a href="index.html">Home</a> &rsaquo; Tentang OFP Press &rsaquo; Tentang Penerbit
-        </div>
-    </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Penerbitan Karya Ilmiah &amp; Profesional Berstandar Tinggi</h2>
+        <p>Mendorong Diseminasi Ilmu Pengetahuan dan Inovasi Melalui Publikasi Berkualitas.</p>
+        <a href="#submit" class="btn-primary">Kirimkan Proposal Buku</a>
+    </section>
 
-    <!-- Isi Utama Halaman tentang-penerbit -->
-    <main class="content-container">
-        <h3>Profil OFP Press</h3>
-        <p>OFP Press merupakan lembaga penerbitan akademik dan profesional independen yang beroperasi sebagai <em>imprint</em> dari <strong>PT OFP Education</strong>. Kami berkomitmen untuk menerbitkan karya ilmiah, buku referensi, serta publikasi profesional berkualitas tinggi yang memberikan dampak nyata bagi pengembangan ilmu pengetahuan dan praktik di lapangan.</p>
-
-        <h3>Komitmen Kualitas &amp; Diseminasi</h3>
-        <p>Dengan memegang prinsip keberlanjutan akademik dan integrasi ilmiah, OFP Press memfasilitasi para peneliti, praktisi, dan akademisi untuk mendiseminasikan gagasan inovatif mereka melalui skema penerbitan monograf, <em>edited book chapters</em>, serta buku teks terstandar.</p>
-
-        <p>Setiap naskah yang masuk ke OFP Press melalui proses telaah (*editorial review*) yang ketat guna memastikan keabsahan metodologi, kebaruan gagasan, serta kepatuhan terhadap standar etika publikasi internasional.</p>
-
-        <h3>Jangkauan &amp; Kolaborasi</h3>
-        <p>OFP Press aktif menjalin kerja sama strategis dengan berbagai jaringan riset nasional maupun internasional, perguruan tinggi, serta organisasi profesi untuk memperluas jangkauan pembaca dan dampak dari setiap publikasi yang kami rilis.</p>
+    <!-- Halaman Utama (Homepage Content) -->
+    <main class="section-container">
+        <section id="visi-misi">
+            <h3 class="section-title">Visi &amp; Misi</h3>
+            <p><strong>Visi:</strong> Menjadi penerbit terdepan dalam menjembatani riset, akademisi, dan praktisi untuk kemajuan pengetahuan dunia.</p>
+            <p><strong>Misi:</strong> Menyediakan ekosistem penerbitan yang kredibel, transparan, dan berstandar internasional.</p>
+        </section>
     </main>
 
     <!-- Footer -->
@@ -416,11 +406,12 @@
           });
         }
 
+        // PERBAIKAN: Penahanan klik di HP hanya untuk Menu Utama (parent), tidak untuk submenu di dalamnya
         var dropdownItems = document.querySelectorAll('.has-dropdown');
         dropdownItems.forEach(function(item) {
-          var link = item.querySelector('a');
-          if (link) {
-            link.addEventListener('click', function(e) {
+          var parentLink = item.querySelector(':scope > a');
+          if (parentLink) {
+            parentLink.addEventListener('click', function(e) {
               if (window.innerWidth <= 768) {
                 e.preventDefault();
                 item.classList.toggle('open-dropdown');
